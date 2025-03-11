@@ -6,9 +6,12 @@ use App\Models\Task;
 use App\Http\Controllers\TaskController;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [TaskController::class, 'index']);
+
 
 Route::get('/greet', [GreetController::class, 'index']);
 
